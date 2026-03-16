@@ -1,0 +1,55 @@
+#hero {
+  width: 100vw;
+  aspect-ratio: 16/9;
+  background-image: url('/hero.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+#hero>.filter>.text {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+}
+
+#hero>.filter {
+  width: 100%;
+  height: 100%;
+  background: #33333399;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+#hero>.filter>.text>h1 {
+  font-size: 3em;
+}
+
+#hero>.filter>.text>p {
+  font-size: 1.5em;
+}
+
+#hero>.filter>.text>button {
+  padding: 14px 70px;
+  font-size: 1.6em;
+  border-radius: 20px;
+  background: #333333;
+  color: white;
+  border: 1px solid #555555;
+  box-shadow: 0 4px 10px #33333344;
+  cursor: pointer;
+  transition: .1s;
+}
+
+#hero>.filter>.text>button:hover {
+  background: #444444;
+}
+
+#hero>.filter>.text>button:active {
+  translate: 0 4px;
+}
