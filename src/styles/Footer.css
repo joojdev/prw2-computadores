@@ -1,0 +1,30 @@
+footer {
+  background: #eeeeee;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+footer>img {
+  height: 150px;
+}
+
+ul.pseudonav {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+ul.pseudonav>li {
+  transition: .1s;
+  cursor: pointer;
+  list-style: none;
+}
+
+ul.pseudonav>li:hover {
+  transform: scale(1.15);
+}
+
+ul.pseudonav>li:active {
+  translate: 0 3px;
+}

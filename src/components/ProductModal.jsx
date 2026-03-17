@@ -43,7 +43,7 @@ function ProductModal({ onCreate, close }) {
       section: selectedSection,
       brand: selectedBrand,
       name: name.trim(),
-      price,
+      price: parseFloat(price),
       state
     }
 
@@ -69,7 +69,7 @@ function ProductModal({ onCreate, close }) {
             Marca:
             <select id="brand" onChange={handleBrandChange} required>
               <option value="">--- Selecione---</option>
-              {brands.map((brand, index) => <option key={index} value={brand}>{brand}</option>)}
+              {Object.keys(brands).map((brandName, index) => <option key={index} value={brandName}>{brandName}</option>)}
             </select>
           </label>
 
@@ -80,7 +80,7 @@ function ProductModal({ onCreate, close }) {
 
           <label>
             Preço:
-            <input type="number" autoComplete="off" value={price} min="0" onChange={handlePriceChange} required />
+            <input type="number" autoComplete="off" value={price} min="0" step="0.01" onChange={handlePriceChange} required />
           </label>
 
           <div className="label">

@@ -3,11 +3,16 @@ import Hero from './components/Hero'
 import Nav from './components/Nav'
 import PageContent from './components/PageContent'
 import ProductModal from './components/ProductModal'
+import Footer from './components/Footer'
+import sections from './data/sections'
 import './App.css'
 
 function App() {
   const [isModalShown, setIsModalShown] = useState(false)
-  const [activeProducts, setActiveProducts] = useState([])
+  const [activeProducts, setActiveProducts] = useState(sections.reduce((acc, current) => {
+    acc[current.name] = []
+    return acc
+  }, {}))
 
   function handleCloseModal() {
     setIsModalShown(false)
@@ -19,7 +24,7 @@ function App() {
 
   function handleNewProduct(product) {
     const newArray = activeProducts
-    newArray.push(product)
+    newArray[product.section].push(product)
     setActiveProducts(newArray)
   }
 
@@ -27,10 +32,9 @@ function App() {
     <>
       <Nav />
       <Hero />
-      <PageContent />
-      <button onClick={() => console.log(activeProducts)}>ver lista de produtos</button>
-      <button onClick={handleOpenModal}>abrir modal</button>
+      <PageContent openModal={handleOpenModal} products={activeProducts} />
       {isModalShown && <ProductModal onCreate={handleNewProduct} close={handleCloseModal} />}
+      <Footer />
     </>
   )
 }

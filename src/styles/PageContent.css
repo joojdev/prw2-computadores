@@ -1,0 +1,27 @@
+.container {
+  background: #333;
+}
+
+.buttonWrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.buttonWrapper>button {
+  padding: 20px 30px;
+  font-size: 1.3em;
+  margin: 10px 30px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  background: #815555;
+  transition: .1s;
+  color: white;
+  border: 1px solid transparent;
+}
+
+.buttonWrapper>button:hover {
+  color: #815555;
+  background: white;
+  border: 1px solid #815555;
+}

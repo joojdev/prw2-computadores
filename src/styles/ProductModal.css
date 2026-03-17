@@ -39,8 +39,21 @@ fieldset>.label>label {
 
 button {
   cursor: pointer;
+  transition: .1s;
 }
 
 button.cancel {
   background: #855454;
+}
+
+button:hover {
+  background: #606960;
+}
+
+button.cancel:hover {
+  background: #946767;
+}
+
+button:active {
+  translate: 0 3px;
 }
