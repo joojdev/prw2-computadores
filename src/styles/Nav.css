@@ -1,0 +1,33 @@
+nav {
+  display: flex;
+  background: rgb(54, 79, 54);
+
+  justify-content: space-between;
+  padding: 10px 25px;
+}
+
+nav>img {
+  height: 80px;
+}
+
+nav>.pages>ul {
+  display: flex;
+  gap: 15px;
+  list-style: none;
+  align-items: center;
+  height: 100%;
+  color: white;
+}
+
+nav>.pages>ul>li {
+  transition: .1s;
+  cursor: pointer;
+}
+
+nav>.pages>ul>li:hover {
+  transform: scale(1.15);
+}
+
+nav>.pages>ul>li:active {
+  translate: 0 3px;
+}

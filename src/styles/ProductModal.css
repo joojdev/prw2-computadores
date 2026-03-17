@@ -1,0 +1,46 @@
+fieldset {
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  color: white;
+  gap: 15px;
+  border-radius: 10px;
+  border: 2px white dashed;
+  background: #33333399;
+}
+
+legend {
+  padding: 0 10px;
+}
+
+fieldset>label,
+fieldset>.label {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 1.3em;
+}
+
+select,
+input,
+fieldset>button {
+  font-size: 1.2em;
+  padding: 10px 30px;
+  border-radius: 15px;
+  border: none;
+  background: #485148;
+  color: white;
+}
+
+fieldset>.label>label {
+  display: flex;
+  gap: 5px;
+}
+
+button {
+  cursor: pointer;
+}
+
+button.cancel {
+  background: #855454;
+}
